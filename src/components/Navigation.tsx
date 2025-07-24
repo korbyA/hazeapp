@@ -50,6 +50,12 @@ const Navigation = () => {
             >
               Features
             </button>
+            <button 
+              onClick={() => scrollToSection('hero')}
+              className="text-text-secondary hover:text-primary transition-colors duration-200"
+            >
+              Download
+            </button>
           </div>
 
           {/* Desktop Actions */}
@@ -65,7 +71,7 @@ const Navigation = () => {
             <Button
               variant="glass" 
               size="sm"
-              onClick={() => scrollToSection('hero')}
+              onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
             >
               Download
             </Button>
@@ -104,17 +110,26 @@ const Navigation = () => {
               >
                 Features
               </button>
+              <button
+                onClick={() => {
+                  scrollToSection('hero');
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200"
+              >
+                Download
+              </button>
               <div className="px-3 py-2">
                 <Button 
                   variant="glass" 
                   size="sm" 
                   className="w-full"
                   onClick={() => {
-                    scrollToSection('hero');
+                    window.open('https://discord.gg/67zpNPHED6', '_blank');
                     setIsMenuOpen(false);
                   }}
                 >
-                  Download
+                  Get Haze
                 </Button>
               </div>
             </div>
