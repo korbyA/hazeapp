@@ -25,7 +25,7 @@ const HeroSection = () => {
           
           {/* Slogan */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-2">
-            Lightning-fast. Secure. Reliable.
+            Lightning-fast. Compatible. Reliable.
           </p>
           <p className="text-text-secondary max-w-2xl mx-auto">
             Advanced and trustworthy executor for running scripts with unmatched performance and security.
