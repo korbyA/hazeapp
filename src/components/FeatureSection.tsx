@@ -47,19 +47,19 @@ const FeatureSection = () => {
     {
       icon: <Puzzle className="w-6 h-6 text-white" />,
       title: "Script Compatibility",
-      description: "Supports a wide range of scripts with 99% UNC.",
+      description: "Supports a wide range of scripts due to the API having a 99% UNC rate.",
       delay: 0.4
     },
     {
       icon: <Monitor className="w-6 h-6 text-white" />,
       title: "Sleek UI",
-      description: "Modern, intuitive interface designed for efficiency. Dark mode and customizable themes included.",
+      description: "Modern, intuitive interface designed for efficiency.",
       delay: 0.5
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-white" />,
       title: "Constant Updates",
-      description: "Regular feature releases and security patches. Active development with community feedback.",
+      description: "Regular feature releases and UI updates.",
       delay: 0.6
     }
   ];
@@ -71,7 +71,7 @@ const FeatureSection = () => {
           Why Choose Haze?
         </h2>
         <p className="text-text-secondary max-w-2xl mx-auto">
-          Discover the features that make Haze the preferred choice for developers and power users worldwide.
+          Discover the features that make Haze the preferred choice for roblox execution.
         </p>
       </div>
 
