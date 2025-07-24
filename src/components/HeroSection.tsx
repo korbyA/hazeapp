@@ -40,7 +40,7 @@ const HeroSection = () => {
           </div>
           <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full">
             <Puzzle className="w-4 h-4 text-primary" />
-            <span className="text-sm">Compatible</span>
+            <span className="text-sm">Compatibility</span>
           </div>
           <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full">
             <Code className="w-4 h-4 text-primary" />
