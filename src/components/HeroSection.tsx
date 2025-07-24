@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, Code, Shield, Zap } from "lucide-react";
+import { Download, Code, Puzzle, Zap } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -39,8 +39,8 @@ const HeroSection = () => {
             <span className="text-sm">Lightning Fast</span>
           </div>
           <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full">
-            <Shield className="w-4 h-4 text-primary" />
-            <span className="text-sm">Secure</span>
+            <Puzzle className="w-4 h-4 text-primary" />
+            <span className="text-sm">Compatible</span>
           </div>
           <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full">
             <Code className="w-4 h-4 text-primary" />
