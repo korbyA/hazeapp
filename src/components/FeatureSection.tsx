@@ -1,4 +1,4 @@
-import { Zap, Shield, Rocket, Lock, Monitor, CheckCircle } from "lucide-react";
+import { Zap, Shield, Rocket, Puzzle, Monitor, CheckCircle } from "lucide-react";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -45,7 +45,7 @@ const FeatureSection = () => {
       delay: 0.3
     },
     {
-      icon: <Lock className="w-6 h-6 text-white" />,
+      icon: <Puzzle className="w-6 h-6 text-white" />,
       title: "Script Compatibility",
       description: "Supports a wide range of scripts with 99% UNC.",
       delay: 0.4
