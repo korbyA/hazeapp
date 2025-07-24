@@ -54,6 +54,7 @@ const HeroSection = () => {
             variant="hero" 
             size="xl" 
             className="group relative overflow-hidden"
+            onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
           >
             <Download className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             Download Haze
@@ -63,7 +64,7 @@ const HeroSection = () => {
 
         {/* Version Info */}
         <p className="text-xs text-muted-foreground mt-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          Version 2.1.4 • Windows • Free
+          Version 0.1.5 • Windows • Free
         </p>
       </div>
     </section>

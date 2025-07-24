@@ -61,7 +61,11 @@ const Navigation = () => {
             >
               {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
-            <Button variant="glass" size="sm">
+            <Button
+              variant="glass" 
+              size="sm"
+              onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
+            >
               Download
             </Button>
           </div>
@@ -119,7 +123,12 @@ const Navigation = () => {
                 Support
               </a>
               <div className="px-3 py-2">
-                <Button variant="glass" size="sm" className="w-full">
+                <Button 
+                  variant="glass" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
+                >
                   Download
                 </Button>
               </div>
