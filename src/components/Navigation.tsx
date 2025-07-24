@@ -16,6 +16,13 @@ const Navigation = () => {
     document.documentElement.classList.toggle('dark', shouldBeDark);
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
@@ -37,18 +44,12 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-text-secondary hover:text-primary transition-colors duration-200">
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="text-text-secondary hover:text-primary transition-colors duration-200"
+            >
               Features
-            </a>
-            <a href="#download" className="text-text-secondary hover:text-primary transition-colors duration-200">
-              Download
-            </a>
-            <a href="#docs" className="text-text-secondary hover:text-primary transition-colors duration-200">
-              Docs
-            </a>
-            <a href="#support" className="text-text-secondary hover:text-primary transition-colors duration-200">
-              Support
-            </a>
+            </button>
           </div>
 
           {/* Desktop Actions */}
@@ -64,7 +65,7 @@ const Navigation = () => {
             <Button
               variant="glass" 
               size="sm"
-              onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
+              onClick={() => scrollToSection('hero')}
             >
               Download
             </Button>
@@ -94,40 +95,24 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-glass-border">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a
-                href="#features"
-                className="block px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => {
+                  scrollToSection('features');
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200"
               >
                 Features
-              </a>
-              <a
-                href="#download"
-                className="block px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Download
-              </a>
-              <a
-                href="#docs"
-                className="block px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Docs
-              </a>
-              <a
-                href="#support"
-                className="block px-3 py-2 text-text-secondary hover:text-primary transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Support
-              </a>
+              </button>
               <div className="px-3 py-2">
                 <Button 
                   variant="glass" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
+                  onClick={() => {
+                    scrollToSection('hero');
+                    setIsMenuOpen(false);
+                  }}
                 >
                   Download
                 </Button>
