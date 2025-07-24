@@ -28,7 +28,7 @@ const HeroSection = () => {
             Lightning-fast. Compatible. Reliable.
           </p>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            Advanced and trustworthy executor for running scripts with unmatched performance and security.
+            Advanced and trustworthy executor for running scripts with unmatched performance and compatibility.
           </p>
         </div>
 
