@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
           
           <div className="flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground">
-            <p>© 2024 Haze. All rights reserved.</p>
+            <p>© 2025 Haze. All rights reserved.</p>
             <div className="flex gap-4 mt-2 md:mt-0">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
