@@ -46,8 +46,8 @@ const FeatureSection = () => {
     },
     {
       icon: <Lock className="w-6 h-6 text-white" />,
-      title: "Secure & Safe",
-      description: "Advanced sandboxing and encryption protect your system. Enterprise-grade security protocols.",
+      title: "Script Compatibility",
+      description: "Supports a wide range of scripts with 99% UNC.",
       delay: 0.4
     },
     {
