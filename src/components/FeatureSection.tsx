@@ -35,7 +35,7 @@ const FeatureSection = () => {
     {
       icon: <Shield className="w-6 h-6 text-white" />,
       title: "Trustworthy",
-      description: "Verified and tested by thousands of users. Open-source transparency with security audits.",
+      description: "The API we use is battle-tested and trusted by thousands of users daily, ensuring stability and reliability you can count on.",
       delay: 0.2
     },
     {
