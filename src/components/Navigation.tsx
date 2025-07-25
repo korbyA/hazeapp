@@ -34,7 +34,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2 ml-2">
+          <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <Code className="w-4 h-4 text-white" />
             </div>
@@ -42,7 +42,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 ml-4">
+          <div className="hidden md:flex items-center gap-8">
             <button 
               onClick={() => scrollToSection('features')}
               className="text-text-secondary hover:text-primary transition-colors duration-200"

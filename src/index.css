@@ -177,7 +177,7 @@ All colors MUST be HSL.
 
   /* Custom utility classes */
   .glass-card {
-    @apply backdrop-blur-lg bg-glass-primary;
+    @apply backdrop-blur-lg bg-glass-primary border border-glass-border;
   }
 
   .gradient-text {
