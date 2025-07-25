@@ -64,7 +64,7 @@ const HeroSection = () => {
 
         {/* Version Info */}
         <p className="text-xs text-muted-foreground mt-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          Version 0.1.5 • Windows • Free
+          Version 0.1.7 • Windows • Free
         </p>
       </div>
     </section>
