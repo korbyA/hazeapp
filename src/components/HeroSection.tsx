@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Download, Code, Puzzle, Zap } from "lucide-react";
-import InteractiveCharacter from "./InteractiveCharacter";
 
 const HeroSection = () => {
   return (
@@ -13,7 +12,7 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Logo/Title */}
-        <div className="mb-8 animate-fade-in-up" style={{ animationDelay: '0s' }}>
+        <div className="mb-8 animate-fade-in-up">
           <div className="inline-flex items-center gap-3 mb-4">
             <div className="relative">
               <Code className="w-12 h-12 text-primary" />
@@ -25,16 +24,16 @@ const HeroSection = () => {
           </div>
           
           {/* Slogan */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-2 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-2">
             Lightning-fast. Compatible. Reliable.
           </p>
-          <p className="text-text-secondary max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-text-secondary max-w-2xl mx-auto">
             Advanced and trustworthy executor for running scripts with unmatched performance and compatibility.
           </p>
         </div>
 
         {/* Quick Features */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up">
           <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full">
             <Zap className="w-4 h-4 text-primary" />
             <span className="text-sm">Lightning Fast</span>
@@ -50,7 +49,7 @@ const HeroSection = () => {
         </div>
 
         {/* Download Button */}
-        <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+        <div className="animate-fade-in-up">
           <Button 
             variant="hero" 
             size="xl" 
@@ -64,14 +63,9 @@ const HeroSection = () => {
         </div>
 
         {/* Version Info */}
-        <p className="text-xs text-muted-foreground mt-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+        <p className="text-xs text-muted-foreground mt-4 animate-fade-in-up">
           Version 0.1.7 • Windows • Free
         </p>
-
-        {/* Interactive Character */}
-        <div className="mt-12 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-          <InteractiveCharacter />
-        </div>
       </div>
     </section>
   );

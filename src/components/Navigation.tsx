@@ -30,7 +30,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-card backdrop-blur-lg shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-card backdrop-blur-lg" style={{ boxShadow: 'var(--shadow-lg)' }}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
