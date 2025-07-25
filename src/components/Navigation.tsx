@@ -7,10 +7,9 @@ const Navigation = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Check for saved theme preference or default to dark mode
+    // Default to dark mode regardless of browser preference
     const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const shouldBeDark = saved === 'dark' || (!saved && prefersDark);
+    const shouldBeDark = saved !== 'light'; // Default to dark unless explicitly set to light
     
     setIsDark(shouldBeDark);
     document.documentElement.classList.toggle('dark', shouldBeDark);
@@ -31,7 +30,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-glass-border backdrop-blur-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-card backdrop-blur-lg shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -99,7 +98,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-glass-border">
+          <div className="md:hidden shadow-inner">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
                 onClick={() => {
