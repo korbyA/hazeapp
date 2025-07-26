@@ -29,15 +29,14 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
 
   return (
     <div 
-      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative"
+      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative hover:!scale-110 hover:!-translate-y-4 hover:!z-50"
       style={{ 
         animationDelay: `${delay}s`,
         transform: isHovered 
-          ? `scale(1.1) translateY(-16px) translateX(${mousePosition.x}px) translateZ(0)`
+          ? `translateX(${mousePosition.x}px) translateZ(0)`
           : 'translateZ(0)',
-        transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease',
-        boxShadow: isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : 'none',
-        zIndex: isHovered ? 50 : 1
+        transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, scale 0.3s ease, translate 0.3s ease',
+        boxShadow: isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : 'none'
       }}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
