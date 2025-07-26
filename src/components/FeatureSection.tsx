@@ -9,7 +9,7 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) => (
   <div 
-    className="group glass-card p-6 rounded-xl hover:shadow-glow-lg transition-all duration-300 transform hover:scale-125 hover:-translate-y-4 hover:z-10 animate-fade-in-up"
+    className="group glass-card p-6 rounded-xl transition-all duration-500 transform hover:scale-150 hover:-translate-y-8 hover:shadow-glow-lg hover:bg-glass-secondary/50 hover:z-20 animate-fade-in-up cursor-pointer"
     style={{ animationDelay: `${delay}s` }}
   >
     <div className="relative mb-4">
