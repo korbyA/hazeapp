@@ -1,4 +1,5 @@
 import { Zap, Shield, Rocket, Puzzle, Monitor, CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -7,24 +8,51 @@ interface FeatureCardProps {
   delay?: number;
 }
 
-const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) => (
-  <div 
-    className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border transition-all duration-300 ease-out hover:!scale-110 hover:!-translate-y-4 hover:!z-50 hover:shadow-2xl animate-fade-in-up cursor-pointer"
-    style={{ 
-      animationDelay: `${delay}s`
-    }}
-  >
-    <div className="relative mb-4">
-      <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-        {icon}
+const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const x = (e.clientX - centerX) / 20;
+    const y = (e.clientY - centerY) / 20;
+    setMousePosition({ x, y });
+  };
+
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setMousePosition({ x: 0, y: 0 });
+  };
+
+  return (
+    <div 
+      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border transition-all duration-500 ease-out hover:!scale-110 hover:!-translate-y-4 hover:!z-50 hover:shadow-2xl animate-fade-in-up cursor-pointer"
+      style={{ 
+        animationDelay: `${delay}s`,
+        transform: isHovered 
+          ? `scale(1.1) translateY(-16px) translateX(${mousePosition.x}px) translateZ(0) rotateX(${mousePosition.y * 0.2}deg) rotateY(${mousePosition.x * 0.2}deg)`
+          : 'translateZ(0)',
+        transition: 'transform 0.5s cubic-bezier(0.23, 1, 0.320, 1)'
+      }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="relative mb-4">
+        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+          {icon}
+        </div>
+        <div className="absolute inset-0 w-12 h-12 bg-primary/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
-      <div className="absolute inset-0 w-12 h-12 bg-primary/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      
+      <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>
+      <p className="text-text-secondary text-sm leading-relaxed">{description}</p>
     </div>
-    
-    <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>
-    <p className="text-text-secondary text-sm leading-relaxed">{description}</p>
-  </div>
-);
+  );
+};
 
 const FeatureSection = () => {
   const features = [
