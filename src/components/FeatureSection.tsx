@@ -9,10 +9,9 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) => (
   <div 
-    className="group glass-card p-6 rounded-xl transition-all duration-300 ease-out transform-gpu hover:scale-110 hover:-translate-y-3 hover:rotate-1 animate-fade-in-up cursor-pointer relative"
+    className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border transition-all duration-300 ease-out hover:!scale-110 hover:!-translate-y-4 hover:!z-50 hover:shadow-2xl animate-fade-in-up cursor-pointer"
     style={{ 
-      animationDelay: `${delay}s`,
-      transformOrigin: 'center center'
+      animationDelay: `${delay}s`
     }}
   >
     <div className="relative mb-4">
@@ -78,7 +77,7 @@ const FeatureSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
         {features.map((feature, index) => (
           <FeatureCard
             key={index}
