@@ -16,8 +16,8 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
     const rect = e.currentTarget.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-    const x = (e.clientX - centerX) / 20;
-    const y = (e.clientY - centerY) / 20;
+    const x = (e.clientX - centerX) / 8; // More pronounced movement
+    const y = (e.clientY - centerY) / 8;
     setMousePosition({ x, y });
   };
 
@@ -29,13 +29,15 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
 
   return (
     <div 
-      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border transition-all duration-500 ease-out hover:!scale-110 hover:!-translate-y-4 hover:!z-50 hover:shadow-2xl animate-fade-in-up cursor-pointer"
+      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative"
       style={{ 
         animationDelay: `${delay}s`,
         transform: isHovered 
-          ? `scale(1.1) translateY(-16px) translateX(${mousePosition.x}px) translateZ(0) rotateX(${mousePosition.y * 0.2}deg) rotateY(${mousePosition.x * 0.2}deg)`
+          ? `scale(1.1) translateY(-16px) translateX(${mousePosition.x}px) translateZ(0)`
           : 'translateZ(0)',
-        transition: 'transform 0.5s cubic-bezier(0.23, 1, 0.320, 1)'
+        transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease',
+        boxShadow: isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 30px rgba(139, 69, 255, 0.3)' : 'none',
+        zIndex: isHovered ? 50 : 1
       }}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
