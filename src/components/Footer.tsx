@@ -23,17 +23,21 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">Quick Links</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-text-secondary hover:text-primary transition-colors duration-200">
-                Documentation
-              </a>
-              <a href="#" className="block text-text-secondary hover:text-primary transition-colors duration-200">
-                API Reference
-              </a>
-              <a href="#" className="block text-text-secondary hover:text-primary transition-colors duration-200">
-                Support
-              </a>
-              <a href="#" className="block text-text-secondary hover:text-primary transition-colors duration-200">
+              <a 
+                href="http://hazelogs.lovable.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-text-secondary hover:text-primary transition-colors duration-200"
+              >
                 Changelog
+              </a>
+              <a 
+                href="https://discord.gg/67zpNPHED6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-text-secondary hover:text-primary transition-colors duration-200"
+              >
+                Support
               </a>
             </div>
           </div>
