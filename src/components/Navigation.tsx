@@ -42,7 +42,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 ml-auto mr-8">
             <button 
               onClick={() => scrollToSection('features')}
               className="text-text-secondary hover:text-primary transition-colors duration-200"
