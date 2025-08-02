@@ -13,15 +13,9 @@ const HeroSection = () => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Logo/Title */}
         <div className="mb-8 animate-fade-in-up">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <div className="relative">
-              <Code className="w-12 h-12 text-primary" />
-              <div className="absolute inset-0 w-12 h-12 bg-primary/20 rounded-full blur-xl" />
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold gradient-text font-mono">
-              Haze
-            </h1>
-          </div>
+          <h1 className="text-5xl md:text-7xl font-bold gradient-text font-mono mb-4">
+            Haze
+          </h1>
           
           {/* Slogan */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-2">
