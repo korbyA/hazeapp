@@ -69,9 +69,6 @@ const Footer = () => {
             </p>
           </div>
           
-          <div className="text-xs text-muted-foreground">
-            <p>© 2025 HazeByLightLolWtf. All rights reserved.</p>
-          </div>
         </div>
       </div>
     </footer>
