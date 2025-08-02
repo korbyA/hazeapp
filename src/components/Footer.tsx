@@ -46,17 +46,13 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">Community</h3>
             <div className="flex gap-2">
-              <Button variant="ghost" size="icon" className="hover:text-primary">
-                <Github className="w-4 h-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:text-primary"
+                onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
+              >
                 <MessageCircle className="w-4 h-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary">
-                <Twitter className="w-4 h-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary">
-                <Mail className="w-4 h-4" />
               </Button>
             </div>
           </div>
