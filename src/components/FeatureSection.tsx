@@ -16,8 +16,8 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
     const rect = e.currentTarget.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-    const x = (e.clientX - centerX) / 8; // More pronounced movement
-    const y = (e.clientY - centerY) / 8;
+    const x = (e.clientX - centerX) / 20; // More pronounced movement
+    const y = (e.clientY - centerY) / 20;
     setMousePosition({ x, y });
   };
 
