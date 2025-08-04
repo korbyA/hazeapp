@@ -29,13 +29,13 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
 
   return (
     <div 
-      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative hover:!scale-110 hover:!-translate-y-4 hover:!z-50"
+      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative hover:!scale-110 hover:!-translate-y-4 hover:!z-50 h-full flex flex-col"
       style={{ 
         animationDelay: `${delay}s`,
         transform: isHovered 
           ? `translateX(${mousePosition.x}px) translateZ(0)`
           : 'translateZ(0)',
-        transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease, scale 0.6s ease, translate 0.6s ease',
+        transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.8s ease, scale 0.8s ease, translate 0.8s ease',
         boxShadow: isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : 'none'
       }}
       onMouseMove={handleMouseMove}
@@ -43,14 +43,15 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
       onMouseLeave={handleMouseLeave}
     >
       <div className="relative mb-4">
-        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow-lg transition-all duration-500 relative z-10">
           {icon}
         </div>
-        <div className="absolute inset-0 w-12 h-12 bg-primary/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 w-12 h-12 bg-primary/40 rounded-lg blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500" />
+        <div className="absolute inset-0 w-12 h-12 bg-primary/60 rounded-lg blur-2xl opacity-0 group-hover:opacity-80 transition-all duration-500 scale-150" />
       </div>
       
       <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>
-      <p className="text-text-secondary text-sm leading-relaxed">{description}</p>
+      <p className="text-text-secondary text-sm leading-relaxed flex-1">{description}</p>
     </div>
   );
 };
