@@ -49,13 +49,13 @@ const Footer = () => {
               <Button 
                 variant="ghost" 
                 size="icon" 
-                className="hover:text-primary"
+                className="hover:text-primary h-10 w-10 md:h-12 md:w-12"
                 aria-label="Join our Discord"
                 title="Join our Discord"
                 onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-8 h-7 md:w-9 md:h-8"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
