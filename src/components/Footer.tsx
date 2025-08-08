@@ -1,5 +1,5 @@
 
-import { heartplus } from "lucide-react";
+import { HeartPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
