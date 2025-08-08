@@ -1,5 +1,5 @@
 
-import { HeartPlus } from "lucide-react";
+import { Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -55,7 +55,7 @@ const Footer = () => {
                 title="Join our Discord"
                 onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
               >
-                <HeartPlus className="w-7 h-7" aria-hidden="true" />
+                <Info className="w-7 h-7" aria-hidden="true" />
               </Button>
             </div>
           </div>
