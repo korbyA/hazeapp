@@ -29,13 +29,13 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
 
   return (
     <div 
-      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative hover:!scale-110 hover:!-translate-y-4 hover:!z-50 h-full min-h-60 flex flex-col"
+      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative hover:!scale-110 hover:!-translate-y-4 hover:!z-50 h-full flex flex-col"
       style={{ 
         animationDelay: `${delay}s`,
         transform: isHovered 
           ? `translateX(${mousePosition.x}px) translateZ(0)`
           : 'translateZ(0)',
-        transition: 'transform 1.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 1.25s cubic-bezier(0.22, 1, 0.36, 1), scale 1.25s cubic-bezier(0.22, 1, 0.36, 1), translate 1.25s cubic-bezier(0.22, 1, 0.36, 1)',
+        transition: 'transform 1.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 1.8s cubic-bezier(0.22, 1, 0.36, 1), scale 1.8s cubic-bezier(0.22, 1, 0.36, 1), translate 1.8s cubic-bezier(0.22, 1, 0.36, 1)',
         boxShadow: isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : 'none'
       }}
       onMouseMove={handleMouseMove}
@@ -108,7 +108,7 @@ const FeatureSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
         {features.map((feature, index) => (
           <FeatureCard
             key={index}
