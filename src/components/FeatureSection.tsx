@@ -35,7 +35,7 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
         transform: isHovered 
           ? `translateX(${mousePosition.x}px) translateZ(0)`
           : 'translateZ(0)',
-        transition: 'transform 1.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 1.8s cubic-bezier(0.22, 1, 0.36, 1), scale 1.8s cubic-bezier(0.22, 1, 0.36, 1), translate 1.8s cubic-bezier(0.22, 1, 0.36, 1)',
+        transition: 'transform 2.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 2.8s cubic-bezier(0.22, 1, 0.36, 1), scale 2.8s cubic-bezier(0.22, 1, 0.36, 1), translate 2.8s cubic-bezier(0.22, 1, 0.36, 1)',
         boxShadow: isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : 'none'
       }}
       onMouseMove={handleMouseMove}
