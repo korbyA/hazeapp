@@ -1,4 +1,4 @@
-import { Github, Twitter, MessageCircle, Mail } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -50,9 +50,19 @@ const Footer = () => {
                 variant="ghost" 
                 size="icon" 
                 className="hover:text-primary"
+                aria-label="Join our Discord"
+                title="Join our Discord"
                 onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
               >
-                <MessageCircle className="w-4 h-4" />
+                <svg
+                  className="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M20.317 4.369A19.791 19.791 0 0016.557 3c-.2.359-.438.846-.6 1.23a18.27 18.27 0 00-5.914 0 12.3 12.3 0 00-.617-1.23 19.736 19.736 0 00-3.76 1.369C2.83 9.293 2.074 14.08 2.425 18.807A19.9 19.9 0 007.06 20.5c.42-.57.795-1.176 1.119-1.807a12.72 12.72 0 01-1.77-.846c.149-.11.294-.224.433-.338 3.417 1.59 7.11 1.59 10.485 0 .141.117.285.231.433.338-.57.33-1.166.62-1.77.846.324.633.7 1.239 1.119 1.807a19.9 19.9 0 004.636-1.693c.38-4.991-.648-9.74-3.328-14.438zM9.862 15.31c-1.018 0-1.846-.924-1.846-2.06 0-1.137.813-2.061 1.846-2.061 1.042 0 1.87.924 1.846 2.06 0 1.137-.804 2.061-1.846 2.061zm4.299 0c-1.018 0-1.846-.924-1.846-2.06 0-1.137.813-2.061 1.846-2.061 1.042 0 1.87.924 1.846 2.06 0 1.137-.804 2.061-1.846 2.061z" />
+                </svg>
               </Button>
             </div>
           </div>
