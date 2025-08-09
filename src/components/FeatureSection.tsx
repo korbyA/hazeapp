@@ -35,7 +35,7 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
         transform: isHovered 
           ? `translateX(${mousePosition.x}px) translateZ(0)`
           : 'translateZ(0)',
-        transition: 'transform 2.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 2.8s cubic-bezier(0.22, 1, 0.36, 1), scale 2.8s cubic-bezier(0.22, 1, 0.36, 1), translate 2.8s cubic-bezier(0.22, 1, 0.36, 1)',
+        transition: 'transform 5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 5s cubic-bezier(0.22, 1, 0.36, 1), scale 5s cubic-bezier(0.22, 1, 0.36, 1), translate 5s cubic-bezier(0.22, 1, 0.36, 1)',
         boxShadow: isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : 'none'
       }}
       onMouseMove={handleMouseMove}
@@ -43,12 +43,12 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
       onMouseLeave={handleMouseLeave}
     >
       <div className="relative mb-4">
-        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow-lg transition-all duration-700 relative z-10 group-hover:ring-4 group-hover:ring-primary/70 group-hover:drop-shadow-[0_0_28px_hsl(var(--primary)/0.9)]">
+        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow-lg transition-all duration-[2000ms] relative z-10 group-hover:ring-4 group-hover:ring-primary/70 group-hover:drop-shadow-[0_0_28px_hsl(var(--primary)/0.9)]">
           {icon}
         </div>
-        <div className="absolute inset-0 w-12 h-12 bg-primary/60 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
-        <div className="absolute inset-0 w-12 h-12 bg-primary/80 rounded-lg blur-3xl opacity-0 group-hover:opacity-95 transition-all duration-700 scale-150" />
-        <div className="absolute inset-0 w-12 h-12 bg-primary/70 rounded-lg blur-[40px] opacity-0 group-hover:opacity-90 transition-all duration-700 scale-[2]" />
+        <div className="absolute inset-0 w-12 h-12 bg-primary/60 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-all duration-[2000ms]" />
+        <div className="absolute inset-0 w-12 h-12 bg-primary/80 rounded-lg blur-3xl opacity-0 group-hover:opacity-95 transition-all duration-[2000ms] scale-150" />
+        <div className="absolute inset-0 w-12 h-12 bg-primary/70 rounded-lg blur-[40px] opacity-0 group-hover:opacity-90 transition-all duration-[2000ms] scale-[2]" />
       </div>
       
       <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>
