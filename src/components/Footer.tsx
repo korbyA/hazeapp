@@ -50,7 +50,7 @@ const Footer = () => {
               <Button 
                 variant="ghost" 
                 size="icon" 
-                className="h-12 w-12 rounded-xl"
+                className="h-12 w-12 rounded-xl duration-1000"
                 aria-label="Join our Discord"
                 title="Join our Discord"
                 onClick={() => window.open('https://discord.gg/67zpNPHED6', '_blank')}
