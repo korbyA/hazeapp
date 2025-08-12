@@ -29,11 +29,11 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
 
   return (
     <div 
-      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative hover:!z-50 h-full flex flex-col"
+      className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative hover:!z-50 h-full flex flex-col transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] duration-[1800ms] will-change-transform hover:!scale-[1.06] hover:!-translate-y-3"
       style={{ 
         animationDelay: `${delay}s`,
-        transform: `translateX(${mousePosition.x}px) translateY(${isHovered ? -16 : 0}px) scale(${isHovered ? 1.08 : 1}) translateZ(0)`,
-        transition: 'transform 8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 8s cubic-bezier(0.22, 1, 0.36, 1)',
+        transform: `translateX(${mousePosition.x}px) translateZ(0)`,
+        transition: 'box-shadow 1500ms cubic-bezier(0.22, 1, 0.36, 1)',
         boxShadow: isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : 'none'
       }}
       onMouseMove={handleMouseMove}
