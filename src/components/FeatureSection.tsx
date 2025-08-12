@@ -33,25 +33,29 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
       className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative hover:!z-50 h-full flex flex-col transform-gpu transition-all ease-[cubic-bezier(0.22,1,0.36,1)] duration-[6000ms] will-change-transform hover:!scale-[1.12] hover:!-translate-y-6 hover:shadow-glow-lg"
       style={{ 
         animationDelay: `${delay}s`,
-        transform: `translateX(${mousePosition.x}px) translateZ(0)`,
-        transition: 'transform 6000ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 6000ms cubic-bezier(0.22, 1, 0.36, 1)',
+        transition: 'box-shadow 6000ms cubic-bezier(0.22, 1, 0.36, 1)',
         boxShadow: isHovered ? '0 35px 70px -15px rgba(0, 0, 0, 0.35)' : 'none'
       }}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative mb-4">
-        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow-lg transition-all duration-[6000ms] ease-[cubic-bezier(0.22,1,0.36,1)] relative z-10 group-hover:ring-4 group-hover:ring-primary/70 group-hover:drop-shadow-[0_0_28px_hsl(var(--primary)/0.9)]">
-          {icon}
+      <div
+        className="transform-gpu transition-transform duration-200 ease-out will-change-transform"
+        style={{ transform: `translate3d(${mousePosition.x}px, ${mousePosition.y}px, 0)` }}
+      >
+        <div className="relative mb-4">
+          <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow-lg transition-all duration-[6000ms] ease-[cubic-bezier(0.22,1,0.36,1)] relative z-10 group-hover:ring-4 group-hover:ring-primary/70 group-hover:drop-shadow-[0_0_28px_hsl(var(--primary)/0.9)]">
+            {icon}
+          </div>
+          <div className="absolute inset-0 w-12 h-12 bg-primary/60 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-all duration-[6000ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
+          <div className="absolute inset-0 w-12 h-12 bg-primary/80 rounded-lg blur-3xl opacity-0 group-hover:opacity-95 transition-all duration-[6000ms] ease-[cubic-bezier(0.22,1,0.36,1)] scale-150" />
+          <div className="absolute inset-0 w-12 h-12 bg-primary/70 rounded-lg blur-[40px] opacity-0 group-hover:opacity-90 transition-all duration-[6000ms] ease-[cubic-bezier(0.22,1,0.36,1)] scale-[2]" />
         </div>
-        <div className="absolute inset-0 w-12 h-12 bg-primary/60 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-all duration-[6000ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
-        <div className="absolute inset-0 w-12 h-12 bg-primary/80 rounded-lg blur-3xl opacity-0 group-hover:opacity-95 transition-all duration-[6000ms] ease-[cubic-bezier(0.22,1,0.36,1)] scale-150" />
-        <div className="absolute inset-0 w-12 h-12 bg-primary/70 rounded-lg blur-[40px] opacity-0 group-hover:opacity-90 transition-all duration-[6000ms] ease-[cubic-bezier(0.22,1,0.36,1)] scale-[2]" />
+        
+        <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>
+        <p className="text-text-secondary text-sm leading-relaxed flex-1">{description}</p>
       </div>
-      
-      <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>
-      <p className="text-text-secondary text-sm leading-relaxed flex-1">{description}</p>
     </div>
   );
 };
