@@ -22,7 +22,6 @@ const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) 
       className="group p-6 rounded-xl backdrop-blur-md bg-glass/20 border border-glass-border animate-fade-in-up cursor-pointer relative hover:!z-50 h-full flex flex-col transform-gpu transition-all ease-[cubic-bezier(0.22,1,0.36,1)] duration-[6000ms] will-change-transform hover:!scale-[1.12] hover:!-translate-y-6 hover:shadow-glow-lg"
       style={{ 
         animationDelay: `${delay}s`,
-        transition: 'box-shadow 6000ms cubic-bezier(0.22, 1, 0.36, 1)',
         boxShadow: isHovered ? '0 35px 70px -15px rgba(0, 0, 0, 0.35)' : 'none'
       }}
       
